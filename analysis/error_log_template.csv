@@ -1,0 +1,2 @@
+id,category,expected,got,failure_type,notes,fix_idea
+EV-005,venture,386667,379085,used_discount_price_not_cap,"Applied the 15% discount ($1.53) instead of the lower cap price ($1.50)","Add examples where the cap price is lower than the discount price"
