@@ -13,11 +13,11 @@ A complete, small-scale post-training loop on an open model: score it on finance
 
 | | Score on 10 held-out questions |
 |---|---|
-| Base model | [X]/10 |
-| After fine-tuning | [X + 1]/10 |
+| Base model | 0/10 |
+| After fine-tuning | 1/10 |
 | Change | **+10 percentage points** |
 
-**How to read this:** one more question answered correctly. With 10 test questions and 22 training examples, the result is directionally useful but noisy, and most of the gain likely comes from learning the answer format (showing work and ending with a `Final answer:` line) rather than new finance knowledge. That is a typical first win, and it is why the next step is more targeted data, not more training.
+**How to read this:** before training, half of the base model's answers did not end with a `Final answer:` line, so the scorer could not read them. After 61 seconds of training on 22 examples, the model answered one question correctly. With a test set this small the result is noisy, and most of the early gain comes from learning the answer format rather than new finance knowledge. That is a typical first win, and it is why the next step is more targeted data, not more training.
 
 ## What's inside
 
